@@ -339,3 +339,42 @@
     color: #e4572e;
 }
 /*==============================================================ANIMATION END================================================*/
+
+/*=====SMALL LAPTOP / ZOOMED IN=====*/
+@media (max-width: 1250px) {
+    .nav {
+        margin: 0px 40px 0px 40px;
+    }
+
+    .search-bar {
+        width: 280px;
+    }
+
+    .filter-bar {
+        padding: 0px 40px 0px 40px;
+    }
+
+    .insp {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .insp-items img {
+        height: 130px;
+        width: 130px;
+    }
+
+    .food {
+        margin: 25px 40px 25px 40px;
+    }
+
+    .food-img {
+        width: 280px;
+        height: 220px;
+    }
+
+    .foot-1, .foot-2, .foot-3 {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+}
