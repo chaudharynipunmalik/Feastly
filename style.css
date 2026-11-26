@@ -1,0 +1,292 @@
+/*=====MAIN=====*/
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/*====MAIN END=====*/
+
+/*=====NAV=====*/
+.nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 150px 0px 150px;
+}
+
+.nav-logo {
+    font-size: 2.5rem;
+}
+
+.nav-center {
+    height: 50px;
+    border: 0px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 2px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-location {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.location-input {
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.location-input::placeholder {
+    font-size: 1rem;
+}
+
+.nav-search-icon {
+    font-size: 1.2rem;
+    border-left: 2px solid lightgrey;
+    padding: 5px;
+}
+
+.search-bar {
+    width: 500px;
+    font-size: 1.2rem;
+    border: none;
+    outline: none;
+}
+
+.search-bar::placeholder {
+    font-size: 1rem;
+}
+
+.nav-login a{
+    font-size: 1.2rem;
+    color: grey;
+    text-decoration: none;
+}
+
+.nav-signin a{
+    font-size: 1.2rem;
+    color: grey;
+    text-decoration: none;
+}
+/*=====NAV END=====*/
+
+/*=====FILTER BAR=====*/
+.filter-bar {
+    background-color: white;
+    color: grey;
+    position: sticky;
+    top: 0;
+    height: 90px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 0px 150px 0px 150px;
+}
+
+.filter-bar div {
+    border: 1px solid lightgrey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-right: 10px;
+}
+/*=====FILTER BAR END=====*/
+
+/*=====INSPIRATION SEC=====*/
+.insp {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #1c1c1c16;
+}
+
+.insp span {
+    font-size: 2rem;
+}
+
+.insp-items {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.insp-items div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.insp-items img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+}
+
+.insp-items p {
+    font-size: 1.2rem;
+}
+/*=====INSPIRATION END=====*/
+
+/*=======================================================FOOD NEAR YOU START=======================================================*/
+.food {
+    margin: 25px 150px 25px 150px;
+}
+
+.title{
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px 0px 50px 0px;
+}
+
+.food-box {
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.food-img {
+    height: 250px;
+    width: 330px;
+    border-radius: 20px;
+}
+
+.f-b-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating {
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: green;
+    color: white;
+    font-size: 0.9rem;
+    border-radius: 5px;
+}
+
+.rating i {
+    font-size: 0.6rem;
+}
+
+.f-b-2 {
+    display: flex;
+    justify-content: space-between;
+    color: #696969;
+    font-weight: lighter;
+}
+
+.f-b-3 {
+    display: flex;
+    justify-content: right;
+    font-size: 0.8rem;
+    color: rgba(0, 0, 0, 0.905);
+}
+
+/*=========================================================FOOD NEAR YOU END=========================================================*/
+
+/*============================================================FOOTER STARTS===================================================*/
+.foot {
+    background-color: #F8F8F8;
+}
+
+.foot-1 {
+    margin: 0px 150px 40px 150px;
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foot-logo {
+    font-size: 2.5rem;
+}
+
+.loc-lang {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.loc-lang div {
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 5px;
+    margin-left: 15px;
+}
+/*=====FOOT 1 END=====*/
+
+/*===== FOOT-2 START====*/
+.foot-2 {
+    margin-left: 150px;
+    margin-right: 150px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.foot-2 span {
+    font-size: 1.1rem;
+}
+
+.foot-2 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.foot-2 li {
+    margin: 10px 0px 10px 0px;
+}
+.foot-2 a {
+    text-decoration: none;
+    color: #696969;
+    font-size: 1rem;
+}
+
+.foot-2 i {
+    font-size: 1.5rem;
+}
+
+/*=====FOOT 3=====*/
+.foot-3 {
+    margin: 0px 150px 0px 150px;
+
+}
+.foot-3 p {
+    margin: 20px 0px 20px 0px;
+    color: #696969;
+}
+/*==============================================================FOOT 3 END=============================================================*/
+
+/*==============================================================ANIMATION====================================================*/
+.nav-login a:hover {
+    color: black;
+}
+
+.filter-bar div:hover {
+    background-color: #6969690e;
+}
+.nav-signin a:hover {
+    color: black;
+}
+.food-box:hover {
+    box-shadow: 0px 0px 5px black;
+}
+
+.foot-2 a:hover {
+    color: black;
+}
+/*==============================================================ANIMATION END================================================*/
