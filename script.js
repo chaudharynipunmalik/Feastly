@@ -1,128 +1,53 @@
-// ===== FEASTLY JAVASCRIPT =====
+// ===== SEARCH =====
 
-// getting elements from html
-let searchBox = document.getElementById("search");
-let boxes = document.getElementsByClassName("food-box");
+let searchBar = document.getElementById("search");
+let rows = document.getElementsByClassName("row");
 let noResult = document.getElementById("no-result");
-let vegBtn = document.getElementById("veg-btn");
-let ratingBtn = document.getElementById("rating-btn");
-let topBtn = document.getElementById("top-btn");
 
-// filters are off at start
-let vegOnly = false;
-let highRating = false;
+// this runs every time the user types something
+searchBar.addEventListener("input", function () {
+    let text = searchBar.value.toLowerCase();
+    let found = 0;
 
+    for (let i = 0; i < rows.length; i++) {
+        let boxes = rows[i].getElementsByClassName("food-box");
+        let shownInRow = 0;
 
-// this function checks every restaurant and hides the ones that dont match
-function showRestaurants() {
-    let text = searchBox.value.toLowerCase();
-    let count = 0;
+        for (let j = 0; j < boxes.length; j++) {
+            // restaurant name and cuisine of this box
+            let name = boxes[j].getElementsByTagName("h3")[0].innerText.toLowerCase();
+            let cuisine = boxes[j].getElementsByTagName("p")[0].innerText.toLowerCase();
 
-    for (let i = 0; i < boxes.length; i++) {
-        let name = boxes[i].getElementsByTagName("h3")[0].innerText.toLowerCase();
-        let cuisine = boxes[i].getElementsByClassName("cuisine")[0].innerText.toLowerCase();
-        let veg = boxes[i].getAttribute("data-veg");
-        let rating = parseFloat(boxes[i].getAttribute("data-rating"));
-
-        let show = true;
-
-        // check search text
-        if (name.includes(text) == false && cuisine.includes(text) == false) {
-            show = false;
+            if (name.includes(text) || cuisine.includes(text)) {
+                boxes[j].style.display = "block";
+                shownInRow++;
+                found++;
+            } else {
+                boxes[j].style.display = "none";
+            }
         }
 
-        // check pure veg filter
-        if (vegOnly == true && veg == "no") {
-            show = false;
-        }
-
-        // check rating filter
-        if (highRating == true && rating < 4.2) {
-            show = false;
-        }
-
-        if (show == true) {
-            boxes[i].style.display = "block";
-            count++;
+        // hide the whole row if nothing in it matches
+        if (shownInRow == 0) {
+            rows[i].style.display = "none";
         } else {
-            boxes[i].style.display = "none";
+            rows[i].style.display = "flex";
+        }
+
+        // while searching, show results from the left side
+        if (text == "") {
+            rows[i].style.justifyContent = "space-between";
+            rows[i].style.gap = "0px";
+        } else {
+            rows[i].style.justifyContent = "flex-start";
+            rows[i].style.gap = "40px";
         }
     }
 
-    // show message if nothing found
-    if (count == 0) {
+    // show message if no restaurant matches
+    if (found == 0) {
         noResult.style.display = "block";
     } else {
         noResult.style.display = "none";
     }
-}
-
-// run search every time user types
-searchBox.addEventListener("keyup", showRestaurants);
-
-
-// pure veg button
-function toggleVeg() {
-    vegOnly = !vegOnly;
-    vegBtn.classList.toggle("active");
-    showRestaurants();
-}
-
-// rating 4.2+ button
-function toggleRating() {
-    highRating = !highRating;
-    ratingBtn.classList.toggle("active");
-    showRestaurants();
-}
-
-// clear all filters
-function resetFilters() {
-    vegOnly = false;
-    highRating = false;
-    searchBox.value = "";
-    vegBtn.classList.remove("active");
-    ratingBtn.classList.remove("active");
-    showRestaurants();
-}
-
-// when user clicks on an inspiration item (pizza, burger etc)
-function searchFood(food) {
-    searchBox.value = food;
-    showRestaurants();
-    document.querySelector(".food").scrollIntoView({ behavior: "smooth" });
-}
-
-
-// login and sign up (just alerts for now)
-function login() {
-    let name = prompt("Enter your name:");
-    if (name != null && name != "") {
-        alert("Welcome back, " + name + "!");
-    }
-}
-
-function signup() {
-    let email = prompt("Enter your email to sign up:");
-    if (email == null || email == "") {
-        return;
-    }
-    if (email.includes("@") && email.includes(".")) {
-        alert("Account created for " + email);
-    } else {
-        alert("Please enter a valid email");
-    }
-}
-
-
-// back to top button shows after scrolling down
-window.onscroll = function () {
-    if (document.documentElement.scrollTop > 300) {
-        topBtn.style.display = "block";
-    } else {
-        topBtn.style.display = "none";
-    }
-};
-
-function goToTop() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+});
