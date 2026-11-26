@@ -2,6 +2,7 @@
 * {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    color: #2d2d2d;
 }
 /*====MAIN END=====*/
 
@@ -18,11 +19,15 @@
     font-size: 2.5rem;
 }
 
+.nav-logo span {
+    color: #e4572e;
+}
+
 .nav-center {
     height: 50px;
     border: 0px;
     border-radius: 10px;
-    box-shadow: 0px 0px 2px black;
+    box-shadow: 0px 0px 3px #e4572e;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,6 +36,10 @@
 .nav-location {
     font-size: 1.2rem;
     padding: 5px;
+}
+
+.nav-location i {
+    color: #e4572e;
 }
 
 .location-input {
@@ -45,8 +54,12 @@
 
 .nav-search-icon {
     font-size: 1.2rem;
-    border-left: 2px solid lightgrey;
+    border-left: 2px solid #f3c9b8;
     padding: 5px;
+}
+
+.nav-search-icon i {
+    color: #8a8a8a;
 }
 
 .search-bar {
@@ -62,13 +75,13 @@
 
 .nav-login a{
     font-size: 1.2rem;
-    color: grey;
+    color: #e4572e;
     text-decoration: none;
 }
 
 .nav-signin a{
     font-size: 1.2rem;
-    color: grey;
+    color: #e4572e;
     text-decoration: none;
 }
 /*=====NAV END=====*/
@@ -76,7 +89,7 @@
 /*=====FILTER BAR=====*/
 .filter-bar {
     background-color: white;
-    color: grey;
+    color: #555555;
     position: sticky;
     top: 0;
     height: 90px;
@@ -87,10 +100,15 @@
 }
 
 .filter-bar div {
-    border: 1px solid lightgrey;
+    border: 1px solid #f3c9b8;
     border-radius: 7px;
     padding: 5px;
     margin-right: 10px;
+}
+
+.filter-bar span,
+.filter-bar i {
+    color: #555555;
 }
 /*=====FILTER BAR END=====*/
 
@@ -100,7 +118,7 @@
     padding-bottom: 50px;
     padding-left: 150px;
     padding-right: 150px;
-    background-color: #1c1c1c16;
+    background-color: #fff4ec;
 }
 
 .insp span {
@@ -111,7 +129,7 @@
     margin-top: 25px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .insp-items div {
@@ -124,10 +142,13 @@
     height: 150px;
     width: 150px;
     border-radius: 50%;
+    object-fit: cover;
+    display: block;
 }
 
 .insp-items p {
     font-size: 1.2rem;
+    margin-top: 10px;
 }
 /*=====INSPIRATION END=====*/
 
@@ -171,7 +192,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: green;
+    background-color: #267e3e;
+    color: white;
+}
+
+.rating pre,
+.rating i {
     color: white;
     font-size: 0.9rem;
     border-radius: 5px;
@@ -185,6 +211,10 @@
     display: flex;
     justify-content: space-between;
     color: #696969;
+}
+
+.f-b-2 p {
+    color: #6b6b6b;
     font-weight: lighter;
 }
 
@@ -192,14 +222,18 @@
     display: flex;
     justify-content: right;
     font-size: 0.8rem;
-    color: rgba(0, 0, 0, 0.905);
+    color: #e4572e;
+}
+
+.f-b-3 p {
+    color: #e4572e;
 }
 
 /*=========================================================FOOD NEAR YOU END=========================================================*/
 
 /*============================================================FOOTER STARTS===================================================*/
 .foot {
-    background-color: #F8F8F8;
+    background-color: #2b2b2b;
 }
 
 .foot-1 {
@@ -214,6 +248,10 @@
     font-size: 2.5rem;
 }
 
+.foot-logo span {
+    color: #e4572e;
+}
+
 .loc-lang {
     display: flex;
     justify-content: space-between;
@@ -222,10 +260,15 @@
 }
 
 .loc-lang div {
-    border: 1px solid grey;
+    border: 1px solid #777777;
     border-radius: 7px;
     padding: 5px;
     margin-left: 15px;
+}
+
+.loc-lang span,
+.loc-lang i {
+    color: white;
 }
 /*=====FOOT 1 END=====*/
 
@@ -240,6 +283,7 @@
 
 .foot-2 span {
     font-size: 1.1rem;
+    color: white;
 }
 
 .foot-2 ul {
@@ -252,12 +296,17 @@
 }
 .foot-2 a {
     text-decoration: none;
-    color: #696969;
+    color: #bdbdbd;
     font-size: 1rem;
 }
 
 .foot-2 i {
     font-size: 1.5rem;
+    color: #bdbdbd;
+}
+
+.foot-3 hr {
+    border-color: #555555;
 }
 
 /*=====FOOT 3=====*/
@@ -267,26 +316,26 @@
 }
 .foot-3 p {
     margin: 20px 0px 20px 0px;
-    color: #696969;
+    color: #9a9a9a;
 }
 /*==============================================================FOOT 3 END=============================================================*/
 
 /*==============================================================ANIMATION====================================================*/
 .nav-login a:hover {
-    color: black;
+    color: #b8401d;
 }
 
 .filter-bar div:hover {
-    background-color: #6969690e;
+    background-color: #fff0e8;
 }
 .nav-signin a:hover {
-    color: black;
+    color: #b8401d;
 }
 .food-box:hover {
-    box-shadow: 0px 0px 5px black;
+    box-shadow: 0px 0px 5px #e4572e;
 }
 
 .foot-2 a:hover {
-    color: black;
+    color: #e4572e;
 }
 /*==============================================================ANIMATION END================================================*/
